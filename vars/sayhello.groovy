@@ -5,7 +5,7 @@ def call(body) {
     body()
 
     if (pipelineParams.metaData != null) {
-     print "Job Name ${env.JOB_NAME}"
+     print "Job Name ${env.JOB_NAME} and teams email is ${pipelineParams}"
     }
 
 }
