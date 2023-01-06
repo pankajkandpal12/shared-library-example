@@ -11,7 +11,10 @@ def call(body) {
      print "build commands are ${pipelineParams.buildCommands[0]}"
      def buildCommands = pipelineParams.buildCommands
      buildJava(buildCommands)
-     def buildJava(buildCommands){
+     
+}
+
+def buildJava(buildCommands){
 
      
      stage('Application Build'){
@@ -20,5 +23,4 @@ def call(body) {
    echo "Running a build command override:"
      }
 
-}
 }
