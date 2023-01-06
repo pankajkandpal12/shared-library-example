@@ -8,6 +8,6 @@ def call(body) {
      print "Job Name ${env.JOB_NAME} and teams email is ${pipelineParams}"
     }
      
-     print "build commands are ${pipelineParams.buildCommands}"
+     print "build commands are ${pipelineParams.buildCommands[0]}"
 
 }
