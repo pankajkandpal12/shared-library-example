@@ -17,21 +17,7 @@ def call(body) {
      stage('Application Build'){
 
      
-    try {
-
-       if (buildCommands!=null){
-        echo "Running a build command override:"
-        sh "$buildCommands"
-    }
-    catch(Exception e) {
-      
-    }
-    finally {
-      
-    }
-    
-
-     }
+   echo "Running a build command override:"
      }
 
 }
