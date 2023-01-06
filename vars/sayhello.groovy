@@ -22,7 +22,7 @@ def call(body) {
        if (buildCommands!=null){
         echo "Running a build command override:"
         sh "$buildCommands"
-    }
+    }}
     catch(Exception e) {
       
     }
@@ -34,4 +34,3 @@ def call(body) {
      }
      }
 
-}
