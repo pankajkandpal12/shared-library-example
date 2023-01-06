@@ -9,7 +9,7 @@ def call(body) {
     }
      
      print "build commands are ${pipelineParams.buildCommands[0]}"
-     def buildCommands = pipelineParams.buildCommands
+     def buildCommands = ${pipelineParams.buildCommands[0]}
      buildJava(buildCommands)
      
 }
