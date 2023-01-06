@@ -13,14 +13,30 @@ def call(body) {
      buildJava(buildCommands)
      
 }
+ def buildJava(buildCommands){
+ stage('Application Build'){
 
-def buildJava(buildCommands){
+     agent {
+        docker {
+            image 'maven:3-alpine'
+            args '-v /root/.m2:/root/.m2'
+        }
+     }
+    try {
 
-     
-     stage('Application Build'){
+       if (buildCommands!=null){
+        echo "Running a build command override:"
+        sh "$buildCommands"
+    }
+    catch(Exception e) {
+      
+    }
+    finally {
+      
+    }
+    
 
-     
-   echo "Running a build command override:"
+     }
      }
 
 }
