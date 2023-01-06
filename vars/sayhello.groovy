@@ -26,7 +26,7 @@ def call(body) {
 
        if (buildCommands!=null){
         String command=buildCommands[0]
-        echo "Running a build command override:"
+        echo "Running a build command override with command ${command}:"
         sh "${command}"
     }}
     catch(Exception e) {
